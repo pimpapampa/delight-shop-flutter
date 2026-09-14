@@ -28,7 +28,7 @@ export function ShopHome({ query = "" }: { query?: string }) {
     {!normalized && <section className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-18">
       <div className="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-8">
         {categories.map((category) => <Link key={category.slug} to="/category/$categoryId" params={{ categoryId: category.slug }} className="group text-center">
-          <div className={`mx-auto grid aspect-square w-full max-w-48 place-items-center rounded-full ${category.tone} transition-transform duration-300 group-hover:-translate-y-1`}><span className="text-6xl sm:text-7xl" aria-hidden="true">{category.icon}</span></div>
+          <div className={`mx-auto aspect-square w-full max-w-48 overflow-hidden rounded-full ${category.tone} transition-transform duration-300 group-hover:-translate-y-1`}><img src={category.image} alt="" loading="lazy" width={768} height={768} className="size-full object-cover p-2 rounded-full" /></div>
           <h2 className="mt-4 font-display text-lg sm:text-xl">{category.name}</h2>
           <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-primary">Browse <ArrowRight className="size-3" /></span>
         </Link>)}

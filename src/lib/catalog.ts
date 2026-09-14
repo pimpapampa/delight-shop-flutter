@@ -14,10 +14,10 @@ export type Product = {
 };
 
 export const categories = [
-  { slug: "flour-grains", name: "Flour & Grains", icon: "🌾", tone: "bg-category-flour" },
-  { slug: "baking-tools", name: "Baking Tools", icon: "🥣", tone: "bg-category-tools" },
-  { slug: "sweet-treats", name: "Sweet Treats", icon: "🧁", tone: "bg-category-sweets" },
-  { slug: "drink-mixes", name: "Drink Mixes", icon: "🍵", tone: "bg-category-drinks" },
+  { slug: "flour-grains", name: "Flour & Grains", image: cupcakes, tone: "bg-category-flour" },
+  { slug: "baking-tools", name: "Baking Tools", image: strawberry, tone: "bg-category-tools" },
+  { slug: "sweet-treats", name: "Sweet Treats", image: chocolate, tone: "bg-category-sweets" },
+  { slug: "drink-mixes", name: "Drink Mixes", image: matcha, tone: "bg-category-drinks" },
 ] as const;
 
 export const products: Product[] = [
