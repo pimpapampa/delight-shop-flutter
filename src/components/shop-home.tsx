@@ -20,7 +20,7 @@ export function ShopHome({ query = "" }: { query?: string }) {
           <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-widest"><Sparkles className="size-4" /> Freshly made, happily shared</p>
           <h1 className="font-display text-5xl leading-[0.95] sm:text-6xl md:text-7xl">Bake joy at home</h1>
           <p className="mt-5 max-w-lg text-base text-hero-foreground/90 sm:text-lg">Small-batch treats, trusted baking staples, and everything you need for your next sweet idea.</p>
-          <Button asChild size="lg" className="mt-7"><Link to="/shop">Shop bestsellers <ArrowRight /></Link></Button>
+          <Button asChild size="lg" className="mt-7"><Link to="/shop" search={{}}>Shop bestsellers <ArrowRight /></Link></Button>
         </div>
       </div>
     </section>}
@@ -38,7 +38,7 @@ export function ShopHome({ query = "" }: { query?: string }) {
     <section className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16">
       <div className="mb-8 flex items-end justify-between gap-4">
         <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">From our kitchen</p><h2 className="mt-2 font-display text-3xl sm:text-4xl">{normalized ? `Results for “${query}”` : "Our favorites"}</h2></div>
-        {!normalized && <Link to="/shop" className="hidden items-center gap-1 text-sm font-bold text-primary sm:flex">View all <ArrowRight className="size-4" /></Link>}
+        {!normalized && <Link to="/shop" search={{}} className="hidden items-center gap-1 text-sm font-bold text-primary sm:flex">View all <ArrowRight className="size-4" /></Link>}
       </div>
       {visibleProducts.length > 0 ? <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4 md:gap-x-6">{visibleProducts.map((product) => <ProductCard key={product.id} product={product} />)}</div> : <div className="rounded-md border border-dashed border-border bg-card px-6 py-16 text-center"><p className="font-display text-2xl">No treats found</p><p className="mt-2 text-muted-foreground">Try another search or browse all products.</p></div>}
     </section>
