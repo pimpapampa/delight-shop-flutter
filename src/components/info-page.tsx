@@ -1,0 +1,2 @@
+import type { ReactNode } from "react";
+export function InfoPage({ eyebrow, title, children }: { eyebrow: string; title: string; children: ReactNode }) { return <div className="mx-auto max-w-3xl px-5 py-16 sm:px-6 sm:py-24"><p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{eyebrow}</p><h1 className="mt-3 font-display text-4xl sm:text-5xl">{title}</h1><div className="prose-shop mt-8 space-y-5 leading-7 text-muted-foreground">{children}</div></div>; }

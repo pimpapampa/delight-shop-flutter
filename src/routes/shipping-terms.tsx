@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { InfoPage } from "@/components/info-page";
+export const Route = createFileRoute("/shipping-terms")({ head: () => ({ meta: [{ title: "Shipping Terms — The Baking Nook" }, { name: "description", content: "Delivery and shipping information for The Baking Nook." }, { property: "og:title", content: "Shipping Terms — The Baking Nook" }, { property: "og:description", content: "Delivery and shipping information for The Baking Nook." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return <InfoPage eyebrow="Shop information" title="Shipping terms"><p>Orders are carefully packed to arrive fresh and protected. Delivery timing and pricing are confirmed during checkout.</p><p>Replace this sample text with your actual delivery areas, processing times, pickup details, and perishable-goods policy.</p></InfoPage>; }
