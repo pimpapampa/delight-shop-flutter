@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Fredoka", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -59,29 +61,44 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-footer: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-category-flour: var(--category-flour);
+  --color-category-tools: var(--category-tools);
+  --color-category-sweets: var(--category-sweets);
+  --color-category-drinks: var(--category-drinks);
+  --shadow-shop: 0 12px 40px oklch(0.35 0.06 48 / 10%);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.5rem;
+  --background: oklch(0.975 0.025 88);
+  --foreground: oklch(0.29 0.07 45);
+  --card: oklch(0.995 0.012 89);
+  --card-foreground: oklch(0.29 0.07 45);
+  --popover: oklch(0.995 0.012 89);
+  --popover-foreground: oklch(0.29 0.07 45);
+  --primary: oklch(0.69 0.19 48);
+  --primary-foreground: oklch(0.99 0.01 88);
+  --secondary: oklch(0.92 0.07 77);
+  --secondary-foreground: oklch(0.35 0.08 47);
+  --muted: oklch(0.94 0.028 85);
+  --muted-foreground: oklch(0.5 0.055 50);
+  --accent: oklch(0.88 0.1 69);
+  --accent-foreground: oklch(0.32 0.08 45);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.86 0.045 75);
+  --input: oklch(0.86 0.045 75);
+  --ring: oklch(0.69 0.19 48);
+  --hero-foreground: oklch(0.99 0.01 90);
+  --footer: oklch(0.34 0.08 46);
+  --footer-foreground: oklch(0.96 0.03 84);
+  --category-flour: oklch(0.91 0.09 70);
+  --category-tools: oklch(0.91 0.08 20);
+  --category-sweets: oklch(0.93 0.08 47);
+  --category-drinks: oklch(0.89 0.08 128);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +157,11 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
   }
+}
+
+@utility bg-hero-overlay {
+  background: linear-gradient(90deg, oklch(0.21 0.045 45 / 78%), oklch(0.24 0.04 45 / 25%) 64%, transparent);
 }
