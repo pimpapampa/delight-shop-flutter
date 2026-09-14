@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { InfoPage } from "@/components/info-page";
+export const Route = createFileRoute("/about")({ head: () => ({ meta: [{ title: "About Us — The Baking Nook" }, { name: "description", content: "Meet the people and purpose behind The Baking Nook." }, { property: "og:title", content: "About Us — The Baking Nook" }, { property: "og:description", content: "Meet the people and purpose behind The Baking Nook." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: About });
+function About() { return <InfoPage eyebrow="Our story" title="Made for joyful bakers"><p>The Baking Nook is a friendly little corner for beautiful bakes, dependable ingredients, and tools that earn their place in your kitchen.</p><p>This sample copy is ready for you to replace with your real story, values, and team details.</p></InfoPage>; }

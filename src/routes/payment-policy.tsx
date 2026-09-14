@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { InfoPage } from "@/components/info-page";
+export const Route = createFileRoute("/payment-policy")({ head: () => ({ meta: [{ title: "Payment Policy — The Baking Nook" }, { name: "description", content: "Payment information for The Baking Nook orders." }, { property: "og:title", content: "Payment Policy — The Baking Nook" }, { property: "og:description", content: "Payment information for The Baking Nook orders." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return <InfoPage eyebrow="Shop information" title="Payment policy"><p>Payment is collected securely when an order is placed. Available payment methods will appear during checkout.</p><p>Replace this sample policy with your accepted methods, billing schedule, refund process, and local requirements before opening the shop.</p></InfoPage>; }
